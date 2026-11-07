@@ -1,0 +1,23 @@
+flowchart TD
+    A[Input projected geochemical CSV] --> B[Quality control and positive concentration check]
+    B --> C[Empirical normal-score transformation]
+    C --> D[Experimental and fitted variograms]
+    D --> E[Conditional sequential Gaussian simulation]
+    E --> F[Inverse transformation to concentration scale]
+    F --> G[Concentration–Area breakpoint]
+    F --> H[Local singularity index]
+    F --> I[Exploratory multifractal spectrum]
+    B --> J[Binary anomaly label or proxy]
+    J --> K[Spatial block cross-validation]
+    K --> L[Random Forest]
+    K --> M[MLP classifier]
+    L --> N[Probability maps per SGS realization]
+    M --> O[Probability maps per SGS realization]
+    N --> P[SHAP contribution sampling]
+    O --> P
+    P --> Q[Mean and variance across realizations]
+    G --> R[Multi-element coherence]
+    Q --> S[Robustness classification]
+    R --> S
+    S --> T[Priority / resample / background candidate zones]
+    B --> U[Normal-score correlation network]

@@ -1,0 +1,150 @@
+{
+  "config": {
+    "input_csv": "data/synthetic_geochem.csv",
+    "output_dir": "results/demo",
+    "coordinates": [
+      "Easting",
+      "Northing"
+    ],
+    "elements": [
+      "Cu",
+      "Zn",
+      "Pb"
+    ],
+    "label_column": "anomaly_proxy",
+    "proxy_element": null,
+    "exclude_from_predictors": [],
+    "grid_spacing": 1000,
+    "max_grid_cells": 100000,
+    "model": {
+      "algorithms": [
+        "random_forest",
+        "mlp"
+      ],
+      "random_state": 2026,
+      "folds": 5,
+      "block_size": 3000,
+      "transform": "raw",
+      "shap_points": 100,
+      "shap_background": 40
+    },
+    "simulation": {
+      "realizations": 2,
+      "seed": 2026,
+      "variogram_model": "Spherical",
+      "lag_bins": 12,
+      "max_lag_fraction": 0.5,
+      "max_pairs": 100000,
+      "neighbors": 16,
+      "search_radius": 10000
+    },
+    "fractal": {
+      "ca_min_points": 20,
+      "elements": [
+        "Cu",
+        "Zn",
+        "Pb"
+      ],
+      "singularity_window_sizes": [
+        3,
+        5,
+        9,
+        15
+      ],
+      "multifractal_q_min": -2,
+      "multifractal_q_max": 4,
+      "multifractal_q_count": 13
+    },
+    "network": {
+      "transform": "normal_score",
+      "correlation_threshold": 0.5,
+      "fdr_q": 0.05
+    },
+    "robustness": {
+      "probability_threshold": 0.75,
+      "shap_mean_quantile": 0.75,
+      "shap_sd_quantile": 0.5,
+      "minimum_coherence": 0.5,
+      "cluster_epsilon": 2000,
+      "cluster_min_samples": 3
+    }
+  },
+  "input_file": "/home/ubuntu/work/CAGEO-S-26-02501-geochem-workflow/data/synthetic_geochem.csv",
+  "n_samples": 240,
+  "n_grid_cells": 399,
+  "n_realizations": 2,
+  "predictor_features": [
+    "Cu",
+    "Zn",
+    "Pb"
+  ],
+  "note": "Priority/resample classes are screening hypotheses, not validated drilling targets.",
+  "variograms": {
+    "Cu_realization_1": {
+      "parameters": [
+        0.0,
+        3.677394906839556e-24,
+        94620.92552967365,
+        94620.92552967365,
+        6.558282251519115,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.6694382624411244
+    },
+    "Cu_realization_2": {
+      "parameters": [
+        0.0,
+        3.677394906839556e-24,
+        94620.92552967365,
+        94620.92552967365,
+        6.558282251519115,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.6694382624411244
+    },
+    "Zn_realization_1": {
+      "parameters": [
+        0.0,
+        0.09378097177295791,
+        101199.6383171619,
+        101199.6383171619,
+        6.572461353223794,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.7120146995757027
+    },
+    "Zn_realization_2": {
+      "parameters": [
+        0.0,
+        0.09378097177295791,
+        101199.6383171619,
+        101199.6383171619,
+        6.572461353223794,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.7120146995757027
+    },
+    "Pb_realization_1": {
+      "parameters": [
+        0.0,
+        0.20438410447799396,
+        110309.61167656138,
+        110309.61167656138,
+        6.591648750818462,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.7645609278633363
+    },
+    "Pb_realization_2": {
+      "parameters": [
+        0.0,
+        0.20438410447799396,
+        110309.61167656138,
+        110309.61167656138,
+        6.591648750818462,
+        "Spherical"
+      ],
+      "mean_experimental_semivariance": 0.7645609278633363
+    }
+  }
+}

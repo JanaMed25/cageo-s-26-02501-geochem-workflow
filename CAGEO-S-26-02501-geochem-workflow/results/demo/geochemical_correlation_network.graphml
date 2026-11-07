@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="edge" attr.name="n" attr.type="long"/>
+<key id="d1" for="edge" attr.name="q_value" attr.type="double"/>
+<key id="d0" for="edge" attr.name="weight" attr.type="double"/>
+<graph edgedefault="undirected"><node id="Cu"/>
+<node id="Zn"/>
+<node id="Pb"/>
+<edge source="Cu" target="Zn">
+  <data key="d0">0.8253400335476082</data>
+  <data key="d1">1.562290769799273e-60</data>
+  <data key="d2">240</data>
+</edge>
+<edge source="Cu" target="Pb">
+  <data key="d0">0.7611274288313207</data>
+  <data key="d1">1.8089047133920678e-46</data>
+  <data key="d2">240</data>
+</edge>
+<edge source="Zn" target="Pb">
+  <data key="d0">0.7579435470638406</data>
+  <data key="d1">4.7195152704792365e-46</data>
+  <data key="d2">240</data>
+</edge>
+</graph></graphml>

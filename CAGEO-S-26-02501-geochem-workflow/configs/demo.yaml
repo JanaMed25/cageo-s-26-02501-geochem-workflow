@@ -1,0 +1,49 @@
+input_csv: data/synthetic_geochem.csv
+output_dir: results/demo
+coordinates: [Easting, Northing]
+elements: [Cu, Zn, Pb]
+label_column: anomaly_proxy
+proxy_element: null
+exclude_from_predictors: []
+grid_spacing: 1000
+max_grid_cells: 100000
+
+model:
+  algorithms: [random_forest, mlp]
+  random_state: 2026
+  folds: 5
+  block_size: 3000
+  transform: raw
+  shap_points: 100
+  shap_background: 40
+
+simulation:
+  realizations: 2
+  seed: 2026
+  variogram_model: Spherical
+  lag_bins: 12
+  max_lag_fraction: 0.5
+  max_pairs: 100000
+  neighbors: 16
+  search_radius: 10000
+
+fractal:
+  ca_min_points: 20
+  elements: [Cu, Zn, Pb]
+  singularity_window_sizes: [3, 5, 9, 15]
+  multifractal_q_min: -2
+  multifractal_q_max: 4
+  multifractal_q_count: 13
+
+network:
+  transform: normal_score
+  correlation_threshold: 0.5
+  fdr_q: 0.05
+
+robustness:
+  probability_threshold: 0.75
+  shap_mean_quantile: 0.75
+  shap_sd_quantile: 0.50
+  minimum_coherence: 0.5
+  cluster_epsilon: 2000
+  cluster_min_samples: 3

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript and the versioned repository release."
+title: "Reproducible geochemical anomaly mapping workflow for CAGEO-S-26-02501"
+type: software
+version: 0.1.0
+date-released: 2026-11-07
+repository-code: "REPLACE_WITH_GITHUB_URL"
+license: MIT
+authors:
+  - family-names: "El Kasmia"
+    given-names: "Sahar"
+  - family-names: "El Janati"
+    given-names: "M'hamed"
+  - family-names: "Ntihebuwayo"
+    given-names: "Zacharie"
+  - family-names: "El Moume"
+    given-names: "Warda"
+  - family-names: "Marwa"
+    given-names: "Al Abdullah"
+keywords:
+  - sequential Gaussian simulation
+  - geochemical anomaly mapping
+  - spatial cross-validation
+  - SHAP
+  - multifractal analysis
